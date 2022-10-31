@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\boot">
+      <UniqueIdentifier>{666c995b-b74b-47cd-86b0-6d1069d8af71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\kernel">
+      <UniqueIdentifier>{0e33ac7e-58c6-4ac4-a668-3d95378aa629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\hardware">
+      <UniqueIdentifier>{cc8b847c-1eaf-40dd-9a6f-64b0243b2a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mm">
+      <UniqueIdentifier>{7eac6847-a632-4cb0-b346-2ed1a622b667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\proc">
+      <UniqueIdentifier>{ad0adfc0-db79-4e9f-9055-01a550b55cc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\pe">
+      <UniqueIdentifier>{ab7ec406-ecc5-475c-9db4-1a9d080654bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\interrupt">
+      <UniqueIdentifier>{b70ccef4-a892-4d1e-85c6-77788a0a592b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\dev">
+      <UniqueIdentifier>{500286f8-9292-4a53-b413-c7cc2c001ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\fs">
+      <UniqueIdentifier>{8e501293-792a-4ed7-a33d-126832041a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\hardware">
+      <UniqueIdentifier>{5042ae9a-ee4e-4a97-97e3-cb7281dc1663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="compilers">
+      <UniqueIdentifier>{9afdc148-ffd3-4823-b467-7e9a2f73c4bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\boot\boot.s">
+      <Filter>源文件\boot</Filter>
+    </None>
+    <None Include="..\..\tools\build.bat">
+      <Filter>compilers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\kernel\Utility.cpp">
+      <Filter>源文件\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\kernel\dev\Chip8253.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\kernel\dev\Chip8259A.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\machine\GDT.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\machine\IDT.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\machine\Machine.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\machine\PageDirectory.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\machine\TaskStateSegment.cpp">
+      <Filter>源文件\hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\Allocator.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\KernelAllocator.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\New.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\PageManager.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\mm\SwapperManager.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\MemoryDescriptor.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\Process.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\ProcessManager.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\Text.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\User.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\pe\PEParser.cpp">
+      <Filter>源文件\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\interrupt\DiskInterrupt.cpp">
+      <Filter>源文件\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\interrupt\Exception.cpp">
+      <Filter>源文件\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\interrupt\KeyboardInterrupt.cpp">
+      <Filter>源文件\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\interrupt\SystemCall.cpp">
+      <Filter>源文件\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\interrupt\TimeInterrupt.cpp">
+      <Filter>源文件\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dev\ATADriver.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dev\BlockDevice.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dev\BufferManager.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dev\DeviceManager.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dev\DMA.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\fs\File.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\fs\FileManager.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\fs\FileSystem.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\fs\INode.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\fs\OpenFileManager.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\kernel\Video.cpp">
+      <Filter>源文件\kernel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\include\Allocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\BlockDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Buf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\BufferManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\CharDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\DeviceManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\File.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\FileManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\FileSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\INode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Kernel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\KernelAllocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MapNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MemoryDescriptor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\New.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\OpenFileManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\PageManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\PEParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Process.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\ProcessManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\SwapperManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\SysConsts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\SystemCall.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Text.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\TTy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\User.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Assembly.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\ATADriver.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\dev\Chip8253.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\dev\Chip8259A.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\CRT.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\DiskInterrupt.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\DMA.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Exception.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\GDT.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\IDT.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\IOPort.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\Keyboard.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\KeyboardInterrupt.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Machine.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\PageDirectory.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\PageTable.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Regs.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\TaskStateSegment.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\include\TimeInterrupt.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Video.h">
+      <Filter>头文件\hardware</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+@set oos_path=D:\oos
+@set mingw_path=C:\Program Files\MinGW\bin
+@set nasm_path=C:\Program Files\NASM
+@set bochs_path=C:\Program Files\Bochs-2.4.2
+@set BXSHARE=%bochs_path%
+@set partcopy_path=%oos_path%\tools\partcopy
+
+@set path=%partcopy_path%;%bochs_path%;%nasm_path%;%mingw_path%;%oos_path%\tools\;%path%
+
+@cls
+@echo Setting develop and build environment for UnixV6++.

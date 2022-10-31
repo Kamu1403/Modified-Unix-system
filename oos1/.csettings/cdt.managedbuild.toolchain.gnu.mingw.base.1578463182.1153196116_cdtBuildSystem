@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 5.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage2">
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<configuration buildProperties="" description="" id="cdt.managedbuild.toolchain.gnu.mingw.base.1578463182.1153196116" name="oos" parent="org.eclipse.cdt.build.core.emptycfg">
+			<folderInfo id="cdt.managedbuild.toolchain.gnu.mingw.base.1578463182.1153196116." name="/" resourcePath="">
+				<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.854647656" name="cdt.managedbuild.toolchain.gnu.mingw.base" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
+					<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.57438517" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
+					<builder autoBuildTarget="all" buildPath="${workspace_loc:/oos/src}" cleanBuildTarget="clean" enableAutoBuild="false" enableCleanBuild="true" enabledIncrementalBuild="true" id="cdt.managedbuild.builder.gnu.cross.2056921543" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelizationNumber="1" superClass="cdt.managedbuild.builder.gnu.cross"/>
+					<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.1418434115" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
+						<inputType id="cdt.managedbuild.tool.gnu.assembler.input.903943809" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+					</tool>
+					<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.617916480" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+					<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.442811341" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base">
+						<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.982107779" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+					</tool>
+					<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.1599501919" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
+						<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.288961816" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+					</tool>
+					<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1719695945" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base"/>
+					<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1096539191" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base">
+						<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1041593547" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+							<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+							<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+						</inputType>
+					</tool>
+				</toolChain>
+			</folderInfo>
+		</configuration>
+	</storageModule>
+</cproject>

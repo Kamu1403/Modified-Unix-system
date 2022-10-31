@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D709D278-1E5B-41B6-B8E9-1A745BE9B97D}</ProjectGuid>
+    <RootNamespace>src</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\src\boot\boot.s" />
+    <None Include="..\..\tools\build.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\kernel\Utility.cpp" />
+    <ClCompile Include="..\..\src\kernel\dev\Chip8253.cpp" />
+    <ClCompile Include="..\..\src\kernel\dev\Chip8259A.cpp" />
+    <ClCompile Include="..\..\src\machine\GDT.cpp" />
+    <ClCompile Include="..\..\src\machine\IDT.cpp" />
+    <ClCompile Include="..\..\src\machine\Machine.cpp" />
+    <ClCompile Include="..\..\src\machine\PageDirectory.cpp" />
+    <ClCompile Include="..\..\src\machine\TaskStateSegment.cpp" />
+    <ClCompile Include="..\..\src\kernel\Video.cpp" />
+    <ClCompile Include="..\..\src\mm\Allocator.cpp" />
+    <ClCompile Include="..\..\src\mm\KernelAllocator.cpp" />
+    <ClCompile Include="..\..\src\mm\New.cpp" />
+    <ClCompile Include="..\..\src\mm\PageManager.cpp" />
+    <ClCompile Include="..\..\SRC\mm\SwapperManager.cpp" />
+    <ClCompile Include="..\..\src\proc\MemoryDescriptor.cpp" />
+    <ClCompile Include="..\..\src\proc\Process.cpp" />
+    <ClCompile Include="..\..\src\proc\ProcessManager.cpp" />
+    <ClCompile Include="..\..\src\proc\Text.cpp" />
+    <ClCompile Include="..\..\src\proc\User.cpp" />
+    <ClCompile Include="..\..\src\pe\PEParser.cpp" />
+    <ClCompile Include="..\..\src\interrupt\DiskInterrupt.cpp" />
+    <ClCompile Include="..\..\src\interrupt\Exception.cpp" />
+    <ClCompile Include="..\..\SRC\interrupt\KeyboardInterrupt.cpp" />
+    <ClCompile Include="..\..\src\interrupt\SystemCall.cpp" />
+    <ClCompile Include="..\..\SRC\interrupt\TimeInterrupt.cpp" />
+    <ClCompile Include="..\..\src\dev\ATADriver.cpp" />
+    <ClCompile Include="..\..\src\dev\BlockDevice.cpp" />
+    <ClCompile Include="..\..\src\dev\BufferManager.cpp" />
+    <ClCompile Include="..\..\src\dev\DeviceManager.cpp" />
+    <ClCompile Include="..\..\src\dev\DMA.cpp" />
+    <ClCompile Include="..\..\SRC\fs\File.cpp" />
+    <ClCompile Include="..\..\SRC\fs\FileManager.cpp" />
+    <ClCompile Include="..\..\SRC\fs\FileSystem.cpp" />
+    <ClCompile Include="..\..\SRC\fs\INode.cpp" />
+    <ClCompile Include="..\..\SRC\fs\OpenFileManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\include\Allocator.h" />
+    <ClInclude Include="..\..\src\include\BlockDevice.h" />
+    <ClInclude Include="..\..\src\include\Buf.h" />
+    <ClInclude Include="..\..\src\include\BufferManager.h" />
+    <ClInclude Include="..\..\SRC\include\CharDevice.h" />
+    <ClInclude Include="..\..\src\include\DeviceManager.h" />
+    <ClInclude Include="..\..\SRC\include\File.h" />
+    <ClInclude Include="..\..\SRC\include\FileManager.h" />
+    <ClInclude Include="..\..\SRC\include\FileSystem.h" />
+    <ClInclude Include="..\..\SRC\include\INode.h" />
+    <ClInclude Include="..\..\src\include\Kernel.h" />
+    <ClInclude Include="..\..\src\include\KernelAllocator.h" />
+    <ClInclude Include="..\..\src\include\MapNode.h" />
+    <ClInclude Include="..\..\src\include\MemoryDescriptor.h" />
+    <ClInclude Include="..\..\src\include\New.h" />
+    <ClInclude Include="..\..\SRC\include\OpenFileManager.h" />
+    <ClInclude Include="..\..\src\include\PageManager.h" />
+    <ClInclude Include="..\..\src\include\PEParser.h" />
+    <ClInclude Include="..\..\src\include\Process.h" />
+    <ClInclude Include="..\..\src\include\ProcessManager.h" />
+    <ClInclude Include="..\..\SRC\include\SwapperManager.h" />
+    <ClInclude Include="..\..\src\include\SysConsts.h" />
+    <ClInclude Include="..\..\src\include\SystemCall.h" />
+    <ClInclude Include="..\..\src\include\Text.h" />
+    <ClInclude Include="..\..\SRC\include\TTy.h" />
+    <ClInclude Include="..\..\src\include\User.h" />
+    <ClInclude Include="..\..\src\include\Utility.h" />
+    <ClInclude Include="..\..\src\include\Assembly.h" />
+    <ClInclude Include="..\..\src\include\ATADriver.h" />
+    <ClInclude Include="..\..\src\include\dev\Chip8253.h" />
+    <ClInclude Include="..\..\src\include\dev\Chip8259A.h" />
+    <ClInclude Include="..\..\SRC\include\CRT.h" />
+    <ClInclude Include="..\..\src\include\DiskInterrupt.h" />
+    <ClInclude Include="..\..\src\include\DMA.h" />
+    <ClInclude Include="..\..\src\include\Exception.h" />
+    <ClInclude Include="..\..\src\include\GDT.h" />
+    <ClInclude Include="..\..\src\include\IDT.h" />
+    <ClInclude Include="..\..\src\include\IOPort.h" />
+    <ClInclude Include="..\..\SRC\include\Keyboard.h" />
+    <ClInclude Include="..\..\SRC\include\KeyboardInterrupt.h" />
+    <ClInclude Include="..\..\src\include\Machine.h" />
+    <ClInclude Include="..\..\src\include\PageDirectory.h" />
+    <ClInclude Include="..\..\src\include\PageTable.h" />
+    <ClInclude Include="..\..\src\include\Regs.h" />
+    <ClInclude Include="..\..\src\include\TaskStateSegment.h" />
+    <ClInclude Include="..\..\SRC\include\TimeInterrupt.h" />
+    <ClInclude Include="..\..\src\include\Video.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

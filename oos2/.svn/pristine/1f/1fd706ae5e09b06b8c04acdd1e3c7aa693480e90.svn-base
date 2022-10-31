@@ -1,0 +1,105 @@
+#
+# Makefile for Unix V6++ Shell
+#
+
+#命令定义
+CC = gcc
+LD = ld
+OBJDUMP = objdump
+
+#参数定义
+CFLAGS = -w -O0 -g -nostdlib -nostdinc -nostartfiles -fno-builtin -fno-exceptions
+
+#目录定义
+TARGET = .\OBJS
+V6++LIB = "..\lib\Lib_V6++.a"
+INCLUDE = .
+LIB_INCLUDE = ..\lib\include
+
+MAKEIMAGEPATH = ..\..\tools\MakeImage\bin\Debug\programs
+DEMO = demo
+BIN = bin
+
+.PHONY : all
+
+SHELL_OBJS =$(TARGET)\cat.exe	\
+			$(TARGET)\cp.exe	\
+			$(TARGET)\ls.exe	\
+			$(TARGET)\mkdir.exe	\
+			$(TARGET)\rm.exe	\
+			$(TARGET)\perf.exe	\
+			$(TARGET)\copyfile.exe	\
+			$(TARGET)\shutdown.exe	\
+			$(TARGET)\test.exe	\
+			$(TARGET)\sig.exe	\
+			$(TARGET)\forks.exe	\
+			$(TARGET)\trace.exe	\
+			$(TARGET)\echo.exe	\
+			$(TARGET)\date.exe
+			
+#$(TARGET)\performance.exe
+			
+all	:	$(SHELL_OBJS)
+
+	
+$(TARGET)\cat.exe :	cat.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\cat.exe $(MAKEIMAGEPATH)\$(BIN)\cat
+	
+$(TARGET)\cp.exe :	cp.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\cp.exe $(MAKEIMAGEPATH)\$(BIN)\cp
+	
+$(TARGET)\ls.exe :	ls.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\ls.exe $(MAKEIMAGEPATH)\$(BIN)\ls
+	
+$(TARGET)\mkdir.exe :	mkdir.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\mkdir.exe $(MAKEIMAGEPATH)\$(BIN)\mkdir
+	
+$(TARGET)\perf.exe :	performance.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\perf.exe $(MAKEIMAGEPATH)\$(BIN)\perf
+	
+$(TARGET)\rm.exe :	rm.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\rm.exe $(MAKEIMAGEPATH)\$(BIN)\rm
+	
+$(TARGET)\copyfile.exe :	copyfile.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\copyfile.exe $(MAKEIMAGEPATH)\$(DEMO)\cpfile.exe
+	
+$(TARGET)\shutdown.exe :	shutdown.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\shutdown.exe $(MAKEIMAGEPATH)\$(BIN)\shutdown
+
+$(TARGET)\test.exe :	test.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\test.exe $(MAKEIMAGEPATH)\$(DEMO)\test.exe
+	
+$(TARGET)\forks.exe :		forks.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\forks.exe $(MAKEIMAGEPATH)\$(DEMO)\forks.exe
+	
+$(TARGET)\sig.exe :		sig.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\sig.exe $(MAKEIMAGEPATH)\$(DEMO)\sig.exe
+	
+$(TARGET)\trace.exe :		trace.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\trace.exe $(MAKEIMAGEPATH)\$(BIN)\trace
+	
+$(TARGET)\echo.exe :		echo.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\echo.exe $(MAKEIMAGEPATH)\$(BIN)\echo
+	
+$(TARGET)\date.exe :		date.c
+	$(CC) $(CFLAGS) -I"$(INCLUDE)" -I"$(LIB_INCLUDE)"  $< -e _main1 $(V6++LIB) -o $@
+	copy $(TARGET)\date.exe $(MAKEIMAGEPATH)\$(BIN)\date
+	
+clean:
+	del $(TARGET)\*.o
+	del $(TARGET)\*.exe
+	del $(TARGET)\*.asm
+	

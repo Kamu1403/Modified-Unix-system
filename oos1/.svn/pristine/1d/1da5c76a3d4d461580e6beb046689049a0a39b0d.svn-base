@@ -1,0 +1,70 @@
+#ifndef SYS_H
+#define SYS_H
+
+#include <time.h>
+
+#define SIGNUL 0	/* No Signal Received */
+#define SIGDIV 1	/* Divide Error */
+#define SIGDEX 2	/* Debug Exceptions */
+#define SIGBKP 3	/* Breakpoint */
+#define SIGOVF 4	/* Overflow */
+#define SIGBOC 5	/* Bounds Check */
+#define SIGIVP 6	/* Invalid Opcode */
+#define SIGCNA 7	/* Co-processor Not Available */
+#define SIGDFT 8	/* Double Fault */
+#define SIGCSO 9	/* Co-processor Segment Overrun */
+#define SIGINT 10	/* Invalid TSS */
+#define SIGSNP 11	/* Segment Not Present */
+#define SIGSTE 12	/* Stack Exception */
+#define SIGGPE 13	/* General Protection Exception */
+#define SIGPPV 14	/* Page protection violation */
+#define SIGNEM 15	/* Not enough physical memory */
+#define SIGAUM 16	/* Access unallocated memory */
+#define SIGCER 17	/* Co-processor Error */
+#define SIGALC 18	/* Alignment Check Exception */
+#define SIGMCK 19	/* Machine Check Exception */
+#define SIGFPE 20	/* SIMD Float Point Exception */
+#define SIGKIL 21	/* kill */
+#define SIGBRK 22	/* Ctrl+Break */
+#define SIGPIPE 23	/* end of pipe */
+
+int execv(char* pathname, char* argv[]);
+
+int fork();
+
+int wait(int* status);
+
+int exit(int status);
+
+int signal(int signal, void (*func)());
+
+int kill(int pid, int signal);
+
+int sleep(unsigned int seconds);
+
+int brk(unsigned int newSize);
+
+int syncFileSystem();
+
+int getPath(char* path);
+
+int getpid();
+
+unsigned int getgid();
+
+unsigned int getuid();
+
+int setgid(short gid);
+
+int setuid(short uid);
+
+/* 获取进程用户态、核心态CPU时间片数 */
+int times(struct tms* ptms);
+
+/* 获取系统进程切换次数 */
+int getswtch();
+
+/* 启用屏幕底部的lines行输出调试信息 */
+int trace(int lines);
+
+#endif

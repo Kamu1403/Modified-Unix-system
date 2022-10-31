@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\mm">
+      <UniqueIdentifier>{c8c89324-e799-435f-869b-7c7d860fdde5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{ba77f6c0-6b40-4e00-820b-b242f63437f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\mm">
+      <UniqueIdentifier>{dfefe1c7-2f37-4d5c-a476-869928270e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\pe">
+      <UniqueIdentifier>{a919b430-33b6-401d-b4d7-a7bccdc4e2fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\pe">
+      <UniqueIdentifier>{54f0a14d-d7f2-44ce-b3a3-16287f14e7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\proc">
+      <UniqueIdentifier>{2afdc861-39f5-4b3e-9b74-15303e339ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\dev">
+      <UniqueIdentifier>{6757e51e-0e7a-4546-a25a-7b3e70b0ac7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\fs">
+      <UniqueIdentifier>{d4b594b5-0de0-458e-9743-20ecfda28df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\kernel">
+      <UniqueIdentifier>{58937187-c620-4312-a347-6d801686512e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\lib">
+      <UniqueIdentifier>{ae521f4b-4880-43a5-8c3c-1678528929d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\test\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\TestUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\mm\TestAllocator.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\mm\TestNew.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\mm\TestPageManager.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\test\mm\TestSwapperManager.cpp">
+      <Filter>源文件\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\Allocator.cpp">
+      <Filter>源文件\src\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\KernelAllocator.cpp">
+      <Filter>源文件\src\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\New.cpp">
+      <Filter>源文件\src\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mm\PageManager.cpp">
+      <Filter>源文件\src\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\pe\PEParser.cpp">
+      <Filter>源文件\src\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\pe\TestPEParser.cpp">
+      <Filter>源文件\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\proc\MemoryDescriptor.cpp">
+      <Filter>源文件\proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\test\dev\TestBufferManager.cpp">
+      <Filter>源文件\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\test\fs\TestFileSystem.cpp">
+      <Filter>源文件\fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\kernel\Utility.cpp">
+      <Filter>源文件\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\test\lib\Lib.cpp">
+      <Filter>源文件\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SRC\test\lib\TestLib.cpp">
+      <Filter>源文件\lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SRC\test\KernelInclude.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\lib\Lib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\mm\TestAllocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\dev\TestBufferManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\fs\TestFileSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\TestInclude.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\lib\TestLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\mm\TestNew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\mm\TestPageManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\pe\TestPEParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SRC\test\mm\TestSwapperManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\TestUtility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
