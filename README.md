@@ -49,37 +49,38 @@
 - The basic CMake command is supported, and you can run ```clean``` to clear the 
   compilation cache, run ```all``` to recompile, and run ```run``` to start running 
   Unix system.
-<img src=".\resources\1.PNG" width="400"/>
-<img src=".\resources\2.PNG" width="400"/>
-<img src=".\resources\3.PNG" width="400"/>
+<img src=".\resources\1.PNG" width="600"/>
+<img src=".\resources\2.PNG" width="600"/>
+<img src=".\resources\3.PNG" width="600"/>
 
 ## Running examples
 ### Project1
 1. Initializes successfully 
-- <img src=".\resources\1_1.PNG" width="400"/>
+- <img src=".\resources\1_1.PNG" width="600"/>
 2. Run ```stack``` command
-- <img src=".\resources\1_2.PNG" width="400"/>
-- <img src=".\resources\1_3.PNG" width="400"/>
+- <img src=".\resources\1_2.PNG" width="600"/>
+- <img src=".\resources\1_3.PNG" width="600"/>
 
 ### Project2
 1. Add folders with long names
-- <img src=".\resources\2_1.PNG" width="400"/>
+- <img src=".\resources\2_1.PNG" width="600"/>
 2. Add files with long names
-- <img src=".\resources\2_2.PNG" width="400"/>
+- <img src=".\resources\2_2.PNG" width="600"/>
 3. Adding Files with Short Names (folders)
-- <img src=".\resources\2_3.PNG" width="400"/>
+- <img src=".\resources\2_3.PNG" width="600"/>
 4. Go to a folder with a long name and add subfiles
-- <img src=".\resources\2_4.PNG" width="400"/>
+- <img src=".\resources\2_4.PNG" width="600"/>
 5. Recursively delete folders with long names
-- <img src=".\resources\2_5.PNG" width="400"/>
+- <img src=".\resources\2_5.PNG" width="600"/>
 6. Delete files with long names
-- <img src=".\resources\2_6.PNG" width="400"/>
+- <img src=".\resources\2_6.PNG" width="600"/>
 7. In the folder with the short name (fill the folder with the original long name)
-- As can be seen from ls, the file name directory entry of the new short name is filled in the place of the original directory entry (4*32 in total, 3*32 is used).
-- <img src=".\resources\2_7.PNG" width="400"/>
+- As can be seen from ls, the file name directory entry of the new short name is filled in 
+  the place of the original directory entry (4\*32 in total, 3\*32 is used).
+- <img src=".\resources\2_7.PNG" width="600"/>
 8. After re-entry, save the disk
 - You can see that the original created directory entries and files are there.
-- <img src=".\resources\2_8.PNG" width="400"/>
+- <img src=".\resources\2_8.PNG" width="600"/>
 
 ## Reference
 [1] Tian Yu. Design and implementation of a 64-bit operating system. Beijing: 
